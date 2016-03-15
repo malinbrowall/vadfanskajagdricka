@@ -1,4 +1,4 @@
-
+//Tags som används: 7,8,16,19,22,23,24,25
 
 //anropar API:et systemetapi genom ajax. hämtar ut alla  olika typer av drickor, i JSON format. 
 $(document).ready(function(){
