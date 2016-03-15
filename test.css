@@ -10,11 +10,12 @@ body {
 
 
 h1{
-	margin:200px 50px 5px 336px;
+	margin: 30% 21% 2% 30%;
+	font-size: 25px;
 }
 
 #box{
-	margin: auto;
+	margin: 2% 21% 2% 30%;
 	margin-top: 0px;
 	max-width: 50%;
 	line-height:1;
