@@ -62,22 +62,27 @@ a:hover {
       */
 	body{
 		width: 100%;
+		margin: 0px;
+	
 	}
 
 	#box{
 		width: 100%;
 		min-width: 100%;
-		margin-left: 0px;
 		min-height: 300px;
+		margin: 0px;
+		float:left;
+		
 
 	}
 	#box p{
 		padding: 10px;
 		font-size: 20px;
+
 	}
 	h1{
 		width:100%;
-		max-width: 479px;
+		margin: 10% 0%;
 	}
 
 }      
