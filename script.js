@@ -48,7 +48,7 @@ $('.btn').click(function(){
     
         //sparar i localstorage om användaren klickar på save knappen
         $(document).on('click', '.save-btn', function(){
-        console.log("du kickade nu");
+        alert("Nu är den sparad");
         var saveDrink = data[num].name;
         var saveFood = input;
 
