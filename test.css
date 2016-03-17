@@ -60,24 +60,24 @@ a:hover {
     /*
         Egenskaper för mobiler
       */
-      body{
-      	width: 100%;
-      }
+	body{
+		width: 100%;
+	}
 
-      #box{
-      	width: 100%;
-      	min-width: 100%;
-      	margin-left: 0px;
-      	min-height: 300px;
+	#box{
+		width: 100%;
+		min-width: 100%;
+		margin-left: 0px;
+		min-height: 300px;
 
-      }
-      #box p{
-      	padding: 10px;
-      	font-size: 20px;
-      }
-      h1{
-      	width:100%;
-      	max-width: 479px;
-      }
+	}
+	#box p{
+		padding: 10px;
+		font-size: 20px;
+	}
+	h1{
+		width:100%;
+		max-width: 479px;
+	}
 
 }      
