@@ -9,14 +9,13 @@ $(document).ready(function(){
         url: 'https://karlroos-systemet.p.mashape.com/product?order_by=name&tag=25%2C7%2C8%2C16%2C19%2C22%2C23%2C24%2C',
         headers: {'X-Mashape-Key': 'OZ9i1HXl2Hmshk5RuUK0N983D9GXp1MsAFnjsnpdlRfMKb7V6F', 'Accept': 'application/json'},
 		
-                      }).done(function(data){
+        
         }).done(function(data){
 		
 		//hämtar ut all data.
 		//sparar all data
 		AllData = data;
-                      
-                      console.log(AllData);
+               
                   
                                         
                  
@@ -64,16 +63,14 @@ $('.btn').click(function(){
         }); //stänger save-click
 
 		
-	})
-	});
-	});//stänger klick-funktion
+	}); //end klick-event
+	}); //stänger "done"functionen
+	
             
            
     
-            
-     }); //stänger "done"functionen
-    
-    //körs nu när testknappen "se sparade" klickas på.
+     
+    //körs nu när testknappen "se sparade" klickas på, i combo.html
     $('.se-saved').click(function(){
     //hämtar från localstorage
     var favoriter = JSON.parse(localStorage.getItem("Favorit"));
@@ -83,4 +80,3 @@ $('.btn').click(function(){
 
 }); //stänger hela dokument.ready funktion
 
- });
