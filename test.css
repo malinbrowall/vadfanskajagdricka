@@ -10,7 +10,7 @@ body {
 
 
 h1{
-	margin: 30% 21% 2% 30%;
+	margin: 15% 21% 2% 30%;
 	font-size: 25px;
 }
 
@@ -24,6 +24,7 @@ h1{
 	text-align: center;
 	background: rgba(0, 0, 0, 0.4);
 	border-radius: 5px;
+	
 
 }
 
@@ -54,3 +55,29 @@ a {
 a:hover {
 	color:#497000;
 }
+
+@media screen and (max-width:479px) {
+    /*
+        Egenskaper för mobiler
+      */
+      body{
+      	width: 100%;
+      }
+
+      #box{
+      	width: 100%;
+      	min-width: 100%;
+      	margin-left: 0px;
+      	min-height: 300px;
+
+      }
+      #box p{
+      	padding: 10px;
+      	font-size: 20px;
+      }
+      h1{
+      	width:100%;
+      	max-width: 479px;
+      }
+
+}      
