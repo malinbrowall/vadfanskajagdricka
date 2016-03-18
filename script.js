@@ -33,7 +33,7 @@ $('.btn').click(function(){
     
         //hämtar och sparar maträtten som användaren skrev in
         var input = document.getElementById("input").value;
-        console.log(" vad gött med " +input);
+        console.log(" vad gött med " + input);
 
     
         //variabel som sparar vilken typ det är 
@@ -41,11 +41,53 @@ $('.btn').click(function(){
         var type = (data[num].tags[0].name);
         console.log(type);
 		
-		x.innerHTML = "Till "+ input + " rekommenderar vi" + data[num].name + ". Den kostar bara " + data[num].price + "kr på systembolaget, och är ifrån " + data[num].country.name + ". FAN VAD GÖTTT";
+		x.innerHTML = "Till "+ input + " rekommenderar vi " + data[num].name + ". Den kostar bara " + data[num].price + "kr på systembolaget, och är ifrån " + data[num].country.name + ". FAN VAD GÖTTT";
         //lägger till detta på elementet "drink" som heter x
-		x.innerHTML = "Till "+ input + " rekommenderar vi" + data[num].name + ". Den kostar bara " + data[num].price + "kr på systembolaget, och är ifrån " + data[num].country.name + ". FAN VAD GÖTTT <button class='save-btn'> Favorit </button>";
+		x.innerHTML = "Till "+ input + " rekommenderar vi " + data[num].name + ". Den kostar bara " + data[num].price + "kr på systembolaget, och är ifrån " + data[num].country.name + ". FAN VAD GÖTTT <button class='save-btn'> Favorit </button>";
+        //Beroende på vad "var type" får för värde(name) så visas ikonen kopplat till det värdet.
+        //Inte världens snyggaste lösning men den funkar. Bilden visas och försvinner vid nästa sö
+        //Var typ kan få 8 olika värden från vårt api anropp.
+        if (type == 'beer') {
+            document.getElementById("icon").style.display = 'block'
+        } else {
+            document.getElementById("icon").style.display = 'none'
+        };
+        if (type == 'red-wine'){
+            document.getElementById("icon2").style.display = 'block'
+        } else {
+            document.getElementById("icon2").style.display = 'none'
+        };
+        if (type == 'wine'){
+            document.getElementById("icon3").style.display = 'block'
+        } else {
+            document.getElementById("icon3").style.display = 'none'
+        }; 
+        if (type == 'rose'){
+            document.getElementById('icon4').style.display = 'block'
+        } else {
+            document.getElementById('icon4').style.display = 'none'
+        };
+        if (type == 'cider'){
+            document.getElementById('icon5').style.display = 'block'
+        } else {
+            document.getElementById('icon5').style.display = 'none'
+        };
+        if (type == 'lager'){
+            document.getElementById('icon6').style.display = 'block'
+        } else {
+            document.getElementById('icon6').style.display = 'none'
+        }
+        if (type == 'white-wine'){
+            document.getElementById('icon7').style.display = 'block'
+        } else {
+            document.getElementById('icon7').style.display = 'none'
+        };
+        if (type == 'sparkling'){
+            document.getElementById('icon8').style.display = 'block'
+        } else {
+            document.getElementById('icon8').style.display = 'none'
+        };
 
-    
         //sparar i localstorage om användaren klickar på save knappen
         $(document).on('click', '.save-btn', function(){
         alert("Nu är den sparad");

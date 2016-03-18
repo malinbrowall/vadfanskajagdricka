@@ -73,6 +73,13 @@ a:hover {
 	padding-bottom: 5px;
 }
 
+#icon, #icon2,#icon3,#icon4,#icon5,#icon6,#icon7,#icon8,#icon9{
+	display: none;
+	margin-left: 45%;
+	margin-top: 2%;
+}
+
+
 @media screen and (max-width:479px) {
     /*
         Egenskaper för mobiler
@@ -101,5 +108,7 @@ a:hover {
 		width:100%;
 		margin: 10% 0%;
 	}
+
+
 
 }      
