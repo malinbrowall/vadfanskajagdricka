@@ -29,7 +29,7 @@ h1{
 
 }
 
-.btn {
+.btn, .save-btn {
 	background-color:#81b71a;
 	border-radius:0px;
 	border:0px;
@@ -45,8 +45,14 @@ h1{
 	border-color: black;
 }
 
-.btn:hover {
+.btn:hover, .save-btn:hover {
 	background-color:#497000;
+}
+
+.save-btn {
+	font-size: 13px;
+	padding: 5px 10px;
+	border-radius: 3px;
 }
 
 a {
