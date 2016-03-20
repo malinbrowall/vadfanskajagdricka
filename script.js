@@ -90,7 +90,7 @@ $('.btn').click(function(){
 
         //sparar i localstorage om användaren klickar på save knappen
         $(document).on('click', '.save-btn', function(){
-        alert("Nu är den sparad");
+        alert("Nu är din favorit kombination sparad");
         var saveDrink = data[num].name;
         var saveFood = input;
 
@@ -109,7 +109,7 @@ $('.btn').click(function(){
 	}); //stänger "done"functionen
 	
             
-           
+
     
      
     //körs nu när testknappen "se sparade" klickas på, i combo.html

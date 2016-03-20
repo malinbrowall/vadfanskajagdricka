@@ -51,11 +51,31 @@ h1{
 
 .save-btn {
 	display: block;
-	margin-left: 44%;
+	margin-left: 50%;
 	margin-top: 2%;
 	font-size: 13px;
 	padding: 5px 10px;
 	border-radius: 3px;
+}
+
+.se-saved {
+	background-color:#81b71a;
+	color:#ffffff;
+	border-radius: 0px;
+	border:0px;
+	font-family:Arial;
+	font-size:19px;
+	padding:7px 20px;
+	cursor:pointer;
+}
+
+.se-saved:active {
+	border:1px;
+	border-color: black;
+}
+
+.se-saved:hover {
+	background-color:#497000;
 }
 
 a {
