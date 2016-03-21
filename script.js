@@ -1,5 +1,9 @@
 //Tags som används: 7,8,16,19,22,23,24,25
 
+
+//global variabel som sparar alla kombinationer
+var SaveAll = []; 
+
 //När sidan laddas i webbläsaren körs ajax-anropet med GET metoden
 $(document).ready(function(){
         
@@ -33,16 +37,12 @@ $('.btn').click(function(){
     
         //hämtar och sparar maträtten som användaren skrev in
         var input = document.getElementById("input").value;
-        console.log(" vad gött med " + input);
-
+        
     
-        //variabel som sparar vilken typ det är 
-        //DETTA KAN NOG VARA BRA FÖR DIG ATT ANVÄNDA SIMON!!!!!!!!!!!!!!!!!!!! SSIIIIMON!!
+        //variabel som sparar vilken typ utav dryck det är, används sedan till att matchas med en bild
         var type = (data[num].tags[0].name);
-        console.log(type);
+        
 		
-		x.innerHTML = "Till "+ input + " rekommenderar vi " + data[num].name + ". Den kostar bara " + data[num].price + "kr på systembolaget, och är ifrån " + data[num].country.name + ". FAN VAD GÖTTT";
-        //lägger till detta på elementet "drink" som heter x
 		x.innerHTML = "Till "+ input + " rekommenderar vi " + data[num].name + ". Den kostar bara " + data[num].price + "kr på systembolaget, och är ifrån " + data[num].country.name + ". FAN VAD GÖTTT <button class='save-btn'> Favorit </button>";
         //Beroende på vad "var type" får för värde(name) så visas ikonen kopplat till det värdet.
         //Inte världens snyggaste lösning men den funkar. Bilden visas och försvinner vid nästa sö
@@ -86,19 +86,19 @@ $('.btn').click(function(){
             document.getElementById('icon8').style.display = 'block'
         } else {
             document.getElementById('icon8').style.display = 'none'
-        };
+        }
 
         //sparar i localstorage om användaren klickar på save knappen
-        $(document).on('click', '.save-btn', function(){
-        alert("Nu är din favorit kombination sparad");
+        $('.save-btn').on('click', function(){
         var saveDrink = data[num].name;
         var saveFood = input;
 
-        var SaveAll = [];
+        
         SaveAll.push({saveDrink,saveFood});
         var JSONFavorit = JSON.stringify(SaveAll);
         localStorage.setItem("Favorit", JSONFavorit);
-        console.log(SaveAll);
+        
+		alert("Nu är din favorit kombination sparad");
 
 
 
@@ -116,9 +116,14 @@ $('.btn').click(function(){
     $('.se-saved').click(function(){
     //hämtar från localstorage
     var favoriter = JSON.parse(localStorage.getItem("Favorit"));
-    console.log(favoriter);
-    $("#fave").append("<p> Dryck: " + favoriter[0].saveDrink + ". Mat: " + favoriter[0].saveFood + ".</p>"); 
-    });
+   //printar ut listan för de sparade mat och dryckes kombinationerna
+	for (i = 0; i < favoriter.length; i++){
+		var dryck = favoriter[i].saveDrink;
+		var mat = favoriter[i].saveFood;
+		$("#fave").append("<p> Dryck: " + dryck + ". Mat: " + mat +"</p>");
+		$('.se-saved').hide();
+	}
+	});
 
 }); //stänger hela dokument.ready funktion
 
