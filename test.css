@@ -124,14 +124,14 @@ img{
         Egenskaper för mobiler
       */
 	body{
-		width: 100%;
+		max-width: 479px;
 		margin: 0px;
 	
 	}
 
 	#box{
-		width: 100%;
-		min-width: 100%;
+		width:100%;
+		max-width: 90%;
 		min-height: 300px;
 		margin: 0px;
 		float:left;
