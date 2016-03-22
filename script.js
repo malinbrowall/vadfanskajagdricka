@@ -16,20 +16,13 @@ $(document).ready(function (){
         
         }).done(function(data){
 		
-		//hämtar ut all data.
-		//sparar all data
+		//hämtar ut all data och sparar den
 		AllData = data;
-               
-                  
-                                        
-                 
+              
 
 //funktion som körs när man klickar på knappen "sök"
 $('.btn').click(function (){
-	//anropar API:et systemetapi genom ajax. hämtar ut alla, i JSON format. 
-		
 	
-		
 		//hämtar elementet "drink"
 		var x = document.getElementById('drink');
 		//skapar en randomfunktion som går mellan alla 0-49 objekt
@@ -88,8 +81,8 @@ $('.btn').click(function (){
             document.getElementById("icon8").style.display = 'none'
         }
 
-        //sparar i localstorage om användaren klickar på save knappen
-        $('.save-btn').on('click', function (){
+    //sparar i localstorage om användaren klickar på save knappen
+    $('.save-btn').on('click', function (){
         var saveDrink = data[num].name;
         var saveKategori = type;
         var saveFood = input;
@@ -104,20 +97,18 @@ $('.btn').click(function (){
 
 
         }); //stänger save-click
-
 		
 	}); //end klick-event
-	}); //stänger "done"functionen
 	
-            
-
-    
+}); //stänger "done"functionen
+	
+          
      
     //körs nu när testknappen "se sparade" klickas på, i combo.html
     $('.se-saved').click(function (){
     //hämtar från localstorage
     var favoriter = JSON.parse(localStorage.getItem("Favorit"));
-   //printar ut listan för de sparade mat och dryckes kombinationerna
+	//printar ut listan för de sparade mat och dryckes kombinationerna
 	for (i = 0; i < favoriter.length; i++){
 		var dryck = favoriter[i].saveDrink;
 		var mat = favoriter[i].saveFood;
