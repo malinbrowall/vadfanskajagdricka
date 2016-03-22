@@ -134,7 +134,7 @@ img{
 	#box{
 		width:100%;
 		max-width: 90%;
-		min-height: 300px;
+		min-height: 150px;
 		margin: 0px;
 		float:left;
 		
@@ -147,21 +147,24 @@ img{
 	}
 	h1{
 		width:100%;
-		margin: 10% 0%;
+		margin: 30% 0% 7% 0%;
 	}
 
 
 
 }      
 
-@media screen and (max-width:768px) {
+@media screen and (min-width:479px) and (max-width:768px) {
 
 	#box{
-		margin-left:16%;
-		min-width:500px;
-		width:130%;
-		min-height: 300px;
+		margin: 0 auto;
+		min-width:60%;
+		min-height: 200px;
+		padding-top: 13%;
 
+	}
+	h1{
+	
 	}
 
 }
