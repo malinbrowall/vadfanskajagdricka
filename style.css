@@ -149,12 +149,15 @@ img{
 		width:100%;
 		margin: 30% 0% 7% 0%;
 	}
+	.save-btn {
+  	margin-left: 43%;
+  }
 
 
 
 }
 
-@media screen and (min-width: 480px) and (max-width: 670px){
+@media screen and (min-width: 479px) and (max-width: 670px){
   /*
     Egenskaper för landscap-mobil
   */      
@@ -165,7 +168,7 @@ img{
   	margin-left: 43%;
   }
 
-@media screen and (min-width:671px) and (max-width:768px) {
+@media screen and (min-width:670px) and (max-width:768px) {
 
 	#box{
 		margin: 0 auto;
