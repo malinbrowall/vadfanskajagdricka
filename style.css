@@ -153,3 +153,15 @@ img{
 
 
 }      
+
+@media screen and (max-width:768px) {
+
+	#box{
+		margin-left:16%;
+		min-width:500px;
+		width:130%;
+		min-height: 300px;
+
+	}
+
+}
