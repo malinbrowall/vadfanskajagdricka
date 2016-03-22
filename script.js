@@ -113,7 +113,7 @@ $('.btn').click(function (){
 		var dryck = favoriter[i].saveDrink;
 		var mat = favoriter[i].saveFood;
         var kate = favoriter[i].saveKategori;
-		$("#fave").append("<p>Dryck: " + kate + ". Namn: " + dryck + ". Mat: " + mat +"</p>");
+		$("#fave").append("<p>Dryck: <strong>" + kate + "</strong>. Namn: <strong>" + dryck + "</strong>. Mat: <strong>" + mat +"</strong></p>");
 		$('.se-saved').hide();
 	}
 	});
