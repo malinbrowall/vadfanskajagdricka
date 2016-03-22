@@ -42,8 +42,8 @@ $('.btn').click(function (){
         //variabel som sparar vilken typ utav dryck det är, används sedan till att matchas med en bild
         var type = (data[num].tags[0].name);
         
-		
-		x.innerHTML = "Till " + input + " rekommenderar vi " + data[num].name + ". Den kostar bara " + data[num].price + "kr på systembolaget, och är ifrån " + data[num].country.name + ". FAN VAD GÖTTT <button class='save-btn'> Favorit </button>";
+
+		x.innerHTML = "Du kan väl för fan dricka lite " + "<strong>" + data[num].name + "</strong>" + " till " + input + "</br></br>" + data[num].name + " är ifrån " + data[num].country.name + " och kostar " + data[num].price + " kr på systembolaget </br>FAN VAD GOTT! <button class='save-btn'> Favorit </button>";
         //Beroende på vad "var type" får för värde(name) så visas ikonen kopplat till det värdet.
         //Inte världens snyggaste lösning men den funkar. Bilden visas och försvinner vid nästa sö
         //Var typ kan få 8 olika värden från vårt api anropp.
