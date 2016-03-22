@@ -124,7 +124,7 @@ img{
 @media screen and (max-width:479px) {
     /*
         Egenskaper för mobiler
-      */
+    */
 	body{
 		max-width: 479px;
 		margin: 0px;
@@ -152,19 +152,33 @@ img{
 
 
 
-}      
+}
 
-@media screen and (min-width:479px) and (max-width:768px) {
+@media screen and (min-width: 480px) and (max-width: 670px){
+  /*
+    Egenskaper för landscap-mobil
+  */      
+  #box {
+  	margin: 2% 21% 2% 24%;
+  }
+  .save-btn {
+  	margin-left: 43%;
+  }
+
+@media screen and (min-width:671px) and (max-width:768px) {
 
 	#box{
 		margin: 0 auto;
 		min-width:60%;
 		min-height: 90px;
 		padding-top: 3%;
-
 	}
+	
 	h1{
 		margin: 30% 0% 2% 18%;
+	}
+	.save-btn {
+		margin-left: 43%;
 	}
 
 }
